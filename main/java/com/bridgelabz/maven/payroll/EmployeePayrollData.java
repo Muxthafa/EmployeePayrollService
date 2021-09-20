@@ -1,5 +1,10 @@
 package com.bridgelabz.maven.payroll;
 
+/**
+ * EmployeePayrollData class contains payroll data for employee
+ * @author Mohammad Musthafa
+ *
+ */
 public class EmployeePayrollData {
 
     private int id;
