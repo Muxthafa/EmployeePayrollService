@@ -12,6 +12,8 @@ import java.util.Map;
 import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
+import static java.nio.file.StandardWatchEventKinds.*;
+
 
 public class Java8WatchServiceExample {
 	
