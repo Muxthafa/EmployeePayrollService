@@ -17,6 +17,10 @@ public class EmployeePayrollService {
 
 	private List<EmployeePayrollData> employeePayrollList;
 
+	public EmployeePayrollService() {
+		
+	}
+	
 	public EmployeePayrollService(List<EmployeePayrollData> employeePayrollList) {
 		this.employeePayrollList = employeePayrollList;
 	}
@@ -44,9 +48,17 @@ public class EmployeePayrollService {
 	/**
 	 * @method to print data from the file
 	 */
-	public void printData()
-    {
-        new EmployeePayrollFileIOService().printData();
-    }
+	public void printData() {
+		new EmployeePayrollFileIOService().printData();
+	}
+	
+	/**
+	 * @method to read the data from file
+	 * @return
+	 */
+	public long readEmployeePayrollData() {
+		this.employeePayrollList = new EmployeePayrollFileIOService().readData();
+		return this.employeePayrollList.size();
+	}
 
 }
