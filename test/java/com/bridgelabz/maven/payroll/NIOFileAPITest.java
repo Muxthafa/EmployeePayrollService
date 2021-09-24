@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.IntStream;
 
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -50,9 +51,9 @@ public class NIOFileAPITest
 		});
 		
 		//List files ,directories as well as files with extension
-		Files.list(playPath).filter(Files::isRegularFile).forEach(System.out::println);
-		Files.newDirectoryStream(playPath).forEach(System.out::println);
-		Files.newDirectoryStream(playPath, path -> path.toFile().isFile() && path.toString().startsWith("temp")).forEach(System.out::println);
+//		Files.list(playPath).filter(Files::isRegularFile).forEach(System.out::println);
+//		Files.newDirectoryStream(playPath).forEach(System.out::println);
+//		Files.newDirectoryStream(playPath, path -> path.toFile().isFile() && path.toString().startsWith("temp")).forEach(System.out::println);
     }
     
     @Test
