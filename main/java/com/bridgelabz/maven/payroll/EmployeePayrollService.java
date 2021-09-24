@@ -32,30 +32,21 @@ public class EmployeePayrollService {
 		}
 	}
 
+	/**
+	 * @method to count entries in the file
+	 * @param ioService
+	 * @return
+	 */
 	public long countEntries(IOService ioService) {
 		return new EmployeePayrollFileIOService().countEntries();
 	}
-
-//	/**
-//	 * @method to read the data from the Console
-//	 * @param consoleInputReader console input reader
-//	 */
-//	private void readEmployeePayrollData(Scanner consoleInputReader) {
-//		System.out.println("Enter Employee Id:");
-//		int id = consoleInputReader.nextInt();
-//		System.out.println("Enter Employee Name:");
-//		String name = consoleInputReader.next();
-//		System.out.println("Enter Employee Salary:");
-//		double salary = consoleInputReader.nextDouble();
-//		employeePayrollList.add(new EmployeePayrollData(id, name, salary));
-//	}
-//
-//	public static void main(String[] args) {
-//		ArrayList<EmployeePayrollData> employeePayrollList = new ArrayList<EmployeePayrollData>();
-//		EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollList);
-//		Scanner consoleInputReader = new Scanner(System.in);
-//		employeePayrollService.readEmployeePayrollData(consoleInputReader);
-//		employeePayrollService.writeEmployeePayrollData(IOService.FIlE_IO);
-//	}
+	
+	/**
+	 * @method to print data from the file
+	 */
+	public void printData()
+    {
+        new EmployeePayrollFileIOService().printData();
+    }
 
 }

@@ -22,6 +22,10 @@ public class EmployeePayrollFileIOService {
 		}
 	}
 
+	/**
+	 * @method to count employee payroll in the file
+	 * @return
+	 */
 	public long countEntries() {
 		long entries = 0;
 		try {
@@ -30,5 +34,18 @@ public class EmployeePayrollFileIOService {
 			e.printStackTrace();
 		}
 		return entries;
+	}
+	
+	/**
+	 * prints the data from the file
+	 */
+	public void printData() {
+		try {
+			Files.lines(new File(PAYROLL_FILE_NAME).toPath())
+			.forEach(System.out::println);   
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
